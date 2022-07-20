@@ -1,13 +1,9 @@
--- DML(Data Manipulation Language) --
-
--- 테이블 삭제(DDL)
-drop table emp; 
+drop table emp;
 drop table dept;
 
--- 새로운 테이블 생성
 create table emp(
 employee_id number(6),
-first_name varchar2(20),
+firtst_name varchar2(20),
 last_name varchar2(25),
 email varchar2(25),
 phone_number varchar2(20),
@@ -34,9 +30,9 @@ values(310, 'Purchasing');
 select *
 from dept;
 
-commit; -- transcation
+commit;
 
-insert into emp(employee_id, first_name, last_name,
+insert into emp(employee_id, firtst_name, last_name,
                 email, phone_number, hire_date,
                 job_id, salary, commission_pct,
                 manager_id, department_id)
@@ -44,7 +40,7 @@ values(300, 'Louis', 'Pop',
         'Pop@gmail.com', '010-378-1278', sysdate,
         'AC_ACCOUT', 6900, null,
         205, 110);
-
+        
 insert into emp
 values(310, 'Jark', 'Klein',
         'Klein@gmail.com', '010-753-4635', to_date('2022/06/15', 'YYYY/MM/DD'),
@@ -68,23 +64,21 @@ salary number(8, 2),
 commission_pct number(2, 2));
 
 insert into sa_reps(id, name, salary, commission_pct)
-    select employee_id, last_name, salary, commission_pct
+    select empoyee_id, last_name, salary, commission_pct
     from employees
     where job_id like '%REP%';
     
 commit;
 
--- PL/SQL --
--- procedure
 declare
     base number(6) := 400;
 begin
     for i in 1..10 loop
         insert into sa_reps(id, name, salary, commission_pct)
-        values(base + i, 'n' || (base +i), base * i, i * 0.01);
+        values(base + i, 'n' || (base + i), base * i, i * 0.01);
     end loop;
 end;
-/ 
+/
 
 select *
 from sa_reps;
@@ -108,7 +102,7 @@ commit;
 update emp
 set job_id = (select job_id
                 from employees
-                where employee_id = 205),
+                where employee_id 205),
     salary = (select salary
                 from employees
                 where employee_id = 205)
@@ -149,7 +143,7 @@ select *
 from emp;
 
 delete emp
-where department_id = (
+where deaprtment_id (
     select department_id
     from departments
     where department_name = 'Contracting');
@@ -158,4 +152,3 @@ select *
 from emp;
 
 commit;
-

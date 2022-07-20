@@ -216,6 +216,10 @@ and j.job_id = 'IT_PROG';
 
 select e.last_name, e.department_id, d.department_name
 from employees e, departments d
+where e.department_id(+) = d.department_id;
+
+select e.last_name, e.department_id, d.department_name
+from employees e, departments d
 where e.department_id = d.department_id(+); -- full outer join¿∫ ¡∏¿ÁX
 
 select worker.last_name || ' works for ' || manager.last_name
