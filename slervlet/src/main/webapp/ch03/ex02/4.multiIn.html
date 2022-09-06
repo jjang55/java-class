@@ -1,0 +1,23 @@
+<meta charset='utf-8'/>
+<form action='4.multiOut.jsp'>
+	<fieldset> <!-- 비배타적 -->
+		<input type='checkbox' name='letter' value='politics'/>정치
+		<input type='checkbox' name='letter' value='economics'/>경제
+		<input type='checkbox' name='letter' value='culture'/>문화
+	</fieldset>
+	
+	<fieldset> <!-- 배타적 -->
+		<input type='radio' name='gender' value='male'/>남
+		<input type='radio' name='gender' value='female'/>여
+	</fieldset>
+	
+	<fieldset> <!-- value값은 최대한 영어 or 숫자 사용 -->
+		<select name='job' multiple>
+			<option value='developer'>개발자</option>
+			<option value='planner'>기획자</option>
+			<option value='dba'>DBA</option>
+		</select>
+	</fieldset>
+	
+	<input type='submit'/>
+</form>
