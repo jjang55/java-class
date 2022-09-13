@@ -4,9 +4,9 @@
 		return num1 + num2;
 	}
 
-	int num1 = 1;
+	int num1 = 1; // 맴버변수
 %>
 <%
-	int num2 = 2;
+	int num2 = 2; // 지역변수
 %>
 <%= num1 %> + <%= num2 %> = <%= add(num1, num2) %>
