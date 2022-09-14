@@ -22,6 +22,6 @@
 <%
 	}
 %>
-<c:redirect url='cartOut.jsp'>
+<c:redirect url='cartOut2.jsp'>
 	<c:param name='msg' value='${msg}'/>
 </c:redirect>

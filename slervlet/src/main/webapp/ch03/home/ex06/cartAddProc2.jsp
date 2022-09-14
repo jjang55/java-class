@@ -16,10 +16,10 @@
 			cart.add(product);
 	} else {
 %>
-		<c:redirect url='main.jsp'>
+		<c:redirect url='main2.jsp'>
 			<c:param name='msg' value='장바구니에 담을 물건을 선택하세요.'/>
 		</c:redirect>
 <%
 	}
 %>
-<c:redirect url='cartOut.jsp'/>
+<c:redirect url='cartOut2.jsp'/>

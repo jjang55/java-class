@@ -1,6 +1,6 @@
 <%@ page language='java' contentType='text/html; charset=utf-8' pageEncoding='utf-8' %>
 <%@ page import='java.util.List, java.util.ArrayList' %>
-<a href='main.jsp'>진열대</a>
+<a href='main2.jsp'>진열대</a>
 
 <h3>장바구니</h3>
 <%
@@ -9,10 +9,10 @@
 		List<String> cart = (List<String>)cartObj;
 		if(cart.size() > 0) {
 %>
-			<form action='cartDelProc.jsp' method='post'>
+			<form action='cartDelProc2.jsp' method='post'>
 				<ul>
 <%
-					for(String product: cart) { 
+					for(String product: cart) {
 %>
 						<li><%= product %><input type='checkbox' name='product' value='<%= product %>'/></li>
 <%

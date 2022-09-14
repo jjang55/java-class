@@ -3,17 +3,18 @@
 <%@ taglib prefix='c' uri='http://java.sun.com/jsp/jstl/core' %>
 <%
 	String[] products = request.getParameterValues("product");
-	if(products != null && products.length > 0) {
-		List<String> cart = null;
+
+	if(products != null) {
+		String cart = "";
 		
-		Object cartObj = session.getAttribute("cart");
-		if(cartObj == null) {
-			cart = new ArrayList<>();
-			session.setAttribute("cart", cart);
-		} else cart = (List<String>)cartObj;
 		
-		for(String product: products)
-			cart.add(product);
+		if() {
+			
+			
+			response.addCookie(cookie);
+		} else cart = 
+		
+		for(String product: products) cart += product + "/";
 	} else {
 %>
 		<c:redirect url='main.jsp'>
