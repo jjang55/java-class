@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC '-//mybatis.org//DTD Mapper 3.0//EN'
+	'http://mybatis.org/dtd/mybatis-3-mapper.dtd'>
+<mapper namespace='ch05.dao.map.LaborerMap'>
+	<select id='selectLaborer'>
+		select last_name, employee_id
+		from employees
+		where employee_id = 101
+	</select>
+</mapper>
