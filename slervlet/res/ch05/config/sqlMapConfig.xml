@@ -18,6 +18,6 @@
 	
 	<mappers>
 		<mapper resource='ch05/dao/map/todayMap.xml'/>
-		<mapper resource='ch05/dao/map/laborerMap.xml'/>
+		<mapper resource='ch05/dao/map/employeeMap.xml'/>
 	</mappers>
 </configuration>
